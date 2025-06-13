@@ -57,7 +57,7 @@ To promote academic integrity and transparency by:
 
 ## 📁 Project Structure
 
-# GenericMedicinePriceTracker
+# PlagCheckChain – Anti-Plagiarism for Code Submissions
 PlagCheckChain/
 ├── Contracts/
 │ └── PlagCheckChain.sol
