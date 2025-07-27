@@ -31,4 +31,24 @@ contract PlagCheckChain {
         }
         return false;
     }
+
+    // 🔍 New Function: Get all submissions by a specific student
+    function getSubmissionsByStudent(address student) public view returns (Submission[] memory) {
+        uint count = 0;
+        for (uint i = 0; i < submissions.length; i++) {
+            if (submissions[i].student == student) {
+                count++;
+            }
+        }
+
+        Submission[] memory result = new Submission[](count);
+        uint index = 0;
+        for (uint i = 0; i < submissions.length; i++) {
+            if (submissions[i].student == student) {
+                result[index] = submissions[i];
+                index++;
+            }
+        }
+        return result;
+    }
 }
